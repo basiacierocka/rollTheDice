@@ -1,29 +1,23 @@
 /*
 This is simple simulator of rolling dice. Have fun.
 */
-var randomNum=[], diceSum, field, domField;
-var rollButton = document.querySelector('.roll_button');
-var clearButton = document.querySelector('.clear_button');
-//var validationMessage = "Please set amount of dice";
-
 function start() {
+	var randomNum=[], diceSum=0, field;
+	var domField=document.querySelector('.diceField')
+	var rollButton = document.querySelector('.roll_button');
+
+	while (domField.hasChildNodes(field)) {
+    domField.removeChild(domField.lastChild);
+	}
 
 	var diceAmount = document.querySelector(".diceAmount").value;
 
-	diceSum = 0;
 	for (i=0; i<diceAmount; i++) {
 		singleRoll = (Math.ceil(Math.random()*6));
 		diceSum += singleRoll;
 		randomNum.push(singleRoll);
 		document.getElementById("score").innerHTML = "The sum is " + diceSum;
 	};
-
-	rollButton.setAttribute("class", "hidden");
-	clearButton.setAttribute("class", "visible");
-	clearButton.setAttribute("class", "clear_button");
-
-	domField = document.createElement("DIV");
-	document.body.appendChild(domField);
 
 	for (j=0; j<randomNum.length; j++) {
 		field = document.createElement("DIV");
@@ -50,15 +44,4 @@ function start() {
 	};
 };
 
-function clear() {
-	document.body.removeChild(domField);
-	document.querySelector(".diceAmount").value = "";
-	document.querySelector("#score").innerHTML = "";
-	randomNum = [];
-	rollButton.setAttribute("class", "visible");
-	rollButton.setAttribute("class", "roll_button");
-	clearButton.setAttribute("class", "hidden");
-}
-
 document.querySelector('.roll_button').addEventListener("click", start);
-document.querySelector('.clear_button').addEventListener("click", clear);
