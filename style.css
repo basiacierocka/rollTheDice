@@ -95,7 +95,7 @@ body {
 	animation: spin 4s infinite linear;
 }
 /*-------------*/
-.roll_button, .clear_button, .diceAmount{
+.roll_button, .diceAmount{
     height: 90px;
     width: 90px;
     display: inline-block;
