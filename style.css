@@ -95,20 +95,25 @@ body {
 	animation: spin 4s infinite linear;
 }
 /*-------------*/
-.roll_button, .clear_button{
+.roll_button, .clear_button, .diceAmount{
     height: 90px;
     width: 90px;
     display: inline-block;
     margin: 0 auto;
+    border-radius: 50%;
+    border: solid 10px #888;
+    font-size: 2em;
+    text-align: center;
 }
 
 .circle{
   margin-top: 2%;
-  background-color: #fff;
+  background-color: #ccc;
   width: 350px;
   height:350px;
   border-radius: 50%;
 }
+
 h1 {
     display: block;
     text-align: center;
