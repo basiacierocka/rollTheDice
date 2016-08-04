@@ -9,13 +9,8 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="container">
-
-    <div class="page-header">
-			<h1>ROLL THE DICE</h1>
-		</div>
-
-		<div class="wrap container">
+	<div class="page-header row col-md-12 col-xs-12 col-lg-12">
+		<div class="wrap col-md-12 col-xs-12 col-lg-12">
 			<div class="cube">
 				<div class="side front one"><div class="dot center"></div></div>
 				<div class="side back six"><div class="dot first"></div><div class="dot second"></div><div class="dot third"></div><div class="dot fourth"></div><div class="dot fivth"></div><div class="dot sixth"></div></div>
@@ -25,19 +20,25 @@
 				<div class="side right four"><div class="dot first"></div><div class="dot third"></div><div class="dot fourth"></div><div class="dot sixth"></div></div>
 			</div>
 		</div>
-
 	</div>
 
-	<div class="container circle">
-			<div>how many dice?<input type="number" class="diceAmount" min="1" maxLength="2" size="9" value="1"/></div>
-			<input type="submit" class="roll_button" value="ROLL!">
-			<span id="score"></span>
-			<div class="diceField"></div>
+	<div class="buttonField row">
+		<div class="diceAmount--container row col-md-12 col-xs-12 col-lg-12">
+			<input type="number" class="diceAmount" placeholder="how many dice? "min="1" maxLength="2" size="9">
+		</div>
+		<div class="col-md-12 col-xs-12 col-lg-12">
+			<input type="submit" class="roll_button" value="ROLL the Dice!">
+		</div>
+	</div>
+
+	<div class="row table">
+		<div class="row col-md-12 col-lg-12" id="score"></div>
+		<div class="row col-md-12 col-lg-12 diceField"></div>
 	</div>
 
 	<footer class="footer">
     <div class="container">
-      <p class="text-muted">by BasiaCierocka 2016</p>
+      <p class="text-muted">by Basia Cierocka 2016</p>
     </div>
   </footer>
 	<script src="./index.js"></script>
