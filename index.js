@@ -4,7 +4,7 @@ This is simple simulator of rolling dice. Have fun.
 var randomNum=[], diceSum, field, domField;
 var rollButton = document.querySelector('.roll_button');
 var clearButton = document.querySelector('.clear_button');
-var validationMessage = "Please set amount of dice";
+//var validationMessage = "Please set amount of dice";
 
 function start() {
 
@@ -20,6 +20,8 @@ function start() {
 
 	rollButton.setAttribute("class", "hidden");
 	clearButton.setAttribute("class", "visible");
+	clearButton.setAttribute("class", "clear_button");
+
 	domField = document.createElement("DIV");
 	document.body.appendChild(domField);
 
@@ -54,6 +56,7 @@ function clear() {
 	document.querySelector("#score").innerHTML = "";
 	randomNum = [];
 	rollButton.setAttribute("class", "visible");
+	rollButton.setAttribute("class", "roll_button");
 	clearButton.setAttribute("class", "hidden");
 }
 
