@@ -16,7 +16,7 @@ function start() {
 		singleRoll = (Math.ceil(Math.random()*6));
 		diceSum += singleRoll;
 		randomNum.push(singleRoll);
-		document.getElementById("score").innerHTML = "The sum is " + diceSum;
+		document.getElementById("score").innerHTML = "The sum = " + diceSum;
 	};
 
 	for (j=0; j<randomNum.length; j++) {
