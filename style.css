@@ -136,6 +136,10 @@ input {
     background-color: #ffffff;
     display: inline-block;
 }
+.diceField{
+  width:auto;
+  height:auto;
+}
 .dice {
     width: 50px;
     height: 50px;
@@ -143,6 +147,7 @@ input {
     margin: 2%;
     border:solid 1px #ccc;
     border-radius: 10px;
+    display:inline-flex;
 }
 #one {
     background-image: url(img/one.jpg);
